@@ -1,0 +1,409 @@
+PS C:\External_Files\GitHub\Grand Clock\Earth> py timezone_converter.py
+Scanned 195 countries and found 33 distinct UTC offsets.
+Your time will be read as Uganda (UTC+3).
+
+Enter a time (e.g. 20:00 or 8:00 PM; blank to quit): 03:00 AM
+
+It is 03:00 in Uganda (UTC+3). All time zones follow:
+
+Algeria                           UTC+1 -> 01:00 on Wed 28 Oct
+Angola                            UTC+1 -> 01:00 on Wed 28 Oct
+Benin                             UTC+1 -> 01:00 on Wed 28 Oct
+Botswana                          UTC+2 -> 02:00 on Wed 28 Oct
+Burkina Faso                      UTC+0 -> 00:00 on Wed 28 Oct
+Burundi                           UTC+2 -> 02:00 on Wed 28 Oct
+Cabo Verde                        UTC-1 -> 23:00 on Tue 27 Oct (previous day)
+Cameroon                          UTC+1 -> 01:00 on Wed 28 Oct
+Central African Republic          UTC+1 -> 01:00 on Wed 28 Oct
+Chad                              UTC+1 -> 01:00 on Wed 28 Oct
+Comoros                           UTC+3 -> 03:00 on Wed 28 Oct
+Congo (Republic of the)           UTC+1 -> 01:00 on Wed 28 Oct
+Côte d'Ivoire                     UTC+0 -> 00:00 on Wed 28 Oct
+Democratic Republic of the Congo  UTC+1 -> 01:00 on Wed 28 Oct; UTC+2 -> 02:00 on Wed 28 Oct
+Djibouti                          UTC+3 -> 03:00 on Wed 28 Oct
+Egypt                             UTC+2 -> 02:00 on Wed 28 Oct
+Equatorial Guinea                 UTC+1 -> 01:00 on Wed 28 Oct
+Eritrea                           UTC+3 -> 03:00 on Wed 28 Oct
+Eswatini                          UTC+2 -> 02:00 on Wed 28 Oct
+Ethiopia                          UTC+3 -> 03:00 on Wed 28 Oct
+Gabon                             UTC+1 -> 01:00 on Wed 28 Oct
+Gambia                            UTC+0 -> 00:00 on Wed 28 Oct
+Ghana                             UTC+0 -> 00:00 on Wed 28 Oct
+Guinea                            UTC+0 -> 00:00 on Wed 28 Oct
+Guinea-Bissau                     UTC+0 -> 00:00 on Wed 28 Oct
+Kenya                             UTC+3 -> 03:00 on Wed 28 Oct
+Lesotho                           UTC+2 -> 02:00 on Wed 28 Oct
+Liberia                           UTC+0 -> 00:00 on Wed 28 Oct
+Libya                             UTC+2 -> 02:00 on Wed 28 Oct
+Madagascar                        UTC+3 -> 03:00 on Wed 28 Oct
+Malawi                            UTC+2 -> 02:00 on Wed 28 Oct
+Mali                              UTC+0 -> 00:00 on Wed 28 Oct
+Mauritania                        UTC+0 -> 00:00 on Wed 28 Oct
+Mauritius                         UTC+4 -> 04:00 on Wed 28 Oct
+Morocco                           UTC+1 -> 01:00 on Wed 28 Oct
+Mozambique                        UTC+2 -> 02:00 on Wed 28 Oct
+Namibia                           UTC+2 -> 02:00 on Wed 28 Oct
+Niger                             UTC+1 -> 01:00 on Wed 28 Oct
+Nigeria                           UTC+1 -> 01:00 on Wed 28 Oct
+Rwanda                            UTC+2 -> 02:00 on Wed 28 Oct
+São Tomé and Príncipe             UTC+0 -> 00:00 on Wed 28 Oct
+Senegal                           UTC+0 -> 00:00 on Wed 28 Oct
+Seychelles                        UTC+4 -> 04:00 on Wed 28 Oct
+Sierra Leone                      UTC+0 -> 00:00 on Wed 28 Oct
+Somalia                           UTC+3 -> 03:00 on Wed 28 Oct
+South Africa                      UTC+2 -> 02:00 on Wed 28 Oct
+South Sudan                       UTC+2 -> 02:00 on Wed 28 Oct
+Sudan                             UTC+2 -> 02:00 on Wed 28 Oct
+Tanzania                          UTC+3 -> 03:00 on Wed 28 Oct
+Togo                              UTC+0 -> 00:00 on Wed 28 Oct
+Tunisia                           UTC+1 -> 01:00 on Wed 28 Oct
+Uganda                            UTC+3 -> 03:00 on Wed 28 Oct
+Zambia                            UTC+2 -> 02:00 on Wed 28 Oct
+Zimbabwe                          UTC+2 -> 02:00 on Wed 28 Oct
+Afghanistan                       UTC+4:30 -> 04:30 on Wed 28 Oct
+Armenia                           UTC+4 -> 04:00 on Wed 28 Oct
+Azerbaijan                        UTC+4 -> 04:00 on Wed 28 Oct
+Bahrain                           UTC+3 -> 03:00 on Wed 28 Oct
+Bangladesh                        UTC+6 -> 06:00 on Wed 28 Oct
+Bhutan                            UTC+6 -> 06:00 on Wed 28 Oct
+Brunei                            UTC+8 -> 08:00 on Wed 28 Oct
+Cambodia                          UTC+7 -> 07:00 on Wed 28 Oct
+China                             UTC+8 -> 08:00 on Wed 28 Oct
+Cyprus                            UTC+2 -> 02:00 on Wed 28 Oct
+Georgia                           UTC+4 -> 04:00 on Wed 28 Oct
+India                             UTC+5:30 -> 05:30 on Wed 28 Oct
+Indonesia                         UTC+7 -> 07:00 on Wed 28 Oct; UTC+8 -> 08:00 on Wed 28 Oct; UTC+9 -> 09:00 on Wed 28 Oct
+Iran                              UTC+3:30 -> 03:30 on Wed 28 Oct
+Iraq                              UTC+3 -> 03:00 on Wed 28 Oct
+Israel                            UTC+2 -> 02:00 on Wed 28 Oct
+Japan                             UTC+9 -> 09:00 on Wed 28 Oct
+Jordan                            UTC+3 -> 03:00 on Wed 28 Oct
+Kazakhstan                        UTC+5 -> 05:00 on Wed 28 Oct
+Kuwait                            UTC+3 -> 03:00 on Wed 28 Oct
+Kyrgyzstan                        UTC+6 -> 06:00 on Wed 28 Oct
+Laos                              UTC+7 -> 07:00 on Wed 28 Oct
+Lebanon                           UTC+2 -> 02:00 on Wed 28 Oct
+Malaysia                          UTC+8 -> 08:00 on Wed 28 Oct
+Maldives                          UTC+5 -> 05:00 on Wed 28 Oct
+Mongolia                          UTC+7 -> 07:00 on Wed 28 Oct; UTC+8 -> 08:00 on Wed 28 Oct
+Myanmar                           UTC+6:30 -> 06:30 on Wed 28 Oct
+Nepal                             UTC+5:45 -> 05:45 on Wed 28 Oct
+North Korea                       UTC+9 -> 09:00 on Wed 28 Oct
+Oman                              UTC+4 -> 04:00 on Wed 28 Oct
+Pakistan                          UTC+5 -> 05:00 on Wed 28 Oct
+Philippines                       UTC+8 -> 08:00 on Wed 28 Oct
+Qatar                             UTC+3 -> 03:00 on Wed 28 Oct
+Saudi Arabia                      UTC+3 -> 03:00 on Wed 28 Oct
+Singapore                         UTC+8 -> 08:00 on Wed 28 Oct
+South Korea                       UTC+9 -> 09:00 on Wed 28 Oct
+Sri Lanka                         UTC+5:30 -> 05:30 on Wed 28 Oct
+Syria                             UTC+3 -> 03:00 on Wed 28 Oct
+Tajikistan                        UTC+5 -> 05:00 on Wed 28 Oct
+Thailand                          UTC+7 -> 07:00 on Wed 28 Oct
+Timor-Leste                       UTC+9 -> 09:00 on Wed 28 Oct
+Türkiye                           UTC+3 -> 03:00 on Wed 28 Oct
+Turkmenistan                      UTC+5 -> 05:00 on Wed 28 Oct
+United Arab Emirates              UTC+4 -> 04:00 on Wed 28 Oct
+Uzbekistan                        UTC+5 -> 05:00 on Wed 28 Oct
+Vietnam                           UTC+7 -> 07:00 on Wed 28 Oct
+Yemen                             UTC+3 -> 03:00 on Wed 28 Oct
+Albania                           UTC+1 -> 01:00 on Wed 28 Oct
+Andorra                           UTC+1 -> 01:00 on Wed 28 Oct
+Austria                           UTC+1 -> 01:00 on Wed 28 Oct
+Belarus                           UTC+3 -> 03:00 on Wed 28 Oct
+Belgium                           UTC+1 -> 01:00 on Wed 28 Oct
+Bosnia and Herzegovina            UTC+1 -> 01:00 on Wed 28 Oct
+Bulgaria                          UTC+2 -> 02:00 on Wed 28 Oct
+Croatia                           UTC+1 -> 01:00 on Wed 28 Oct
+Czechia                           UTC+1 -> 01:00 on Wed 28 Oct
+Denmark                           UTC+1 -> 01:00 on Wed 28 Oct
+Estonia                           UTC+2 -> 02:00 on Wed 28 Oct
+Finland                           UTC+2 -> 02:00 on Wed 28 Oct
+France                            UTC+1 -> 01:00 on Wed 28 Oct
+Germany                           UTC+1 -> 01:00 on Wed 28 Oct
+Greece                            UTC+2 -> 02:00 on Wed 28 Oct
+Hungary                           UTC+1 -> 01:00 on Wed 28 Oct
+Iceland                           UTC+0 -> 00:00 on Wed 28 Oct
+Ireland                           UTC+0 -> 00:00 on Wed 28 Oct
+Italy                             UTC+1 -> 01:00 on Wed 28 Oct
+Latvia                            UTC+2 -> 02:00 on Wed 28 Oct
+Liechtenstein                     UTC+1 -> 01:00 on Wed 28 Oct
+Lithuania                         UTC+2 -> 02:00 on Wed 28 Oct
+Luxembourg                        UTC+1 -> 01:00 on Wed 28 Oct
+Malta                             UTC+1 -> 01:00 on Wed 28 Oct
+Moldova                           UTC+2 -> 02:00 on Wed 28 Oct
+Monaco                            UTC+1 -> 01:00 on Wed 28 Oct
+Montenegro                        UTC+1 -> 01:00 on Wed 28 Oct
+Netherlands                       UTC+1 -> 01:00 on Wed 28 Oct
+North Macedonia                   UTC+1 -> 01:00 on Wed 28 Oct
+Norway                            UTC+1 -> 01:00 on Wed 28 Oct
+Poland                            UTC+1 -> 01:00 on Wed 28 Oct
+Portugal                          UTC-1 -> 23:00 on Tue 27 Oct (previous day); UTC+0 -> 00:00 on Wed 28 Oct
+Romania                           UTC+2 -> 02:00 on Wed 28 Oct
+Russia                            UTC+2 -> 02:00 on Wed 28 Oct; UTC+3 -> 03:00 on Wed 28 Oct; UTC+4 -> 04:00 on Wed 28 Oct; UTC+5 -> 05:00 on Wed 28 Oct; UTC+6 -> 06:00 on Wed 28 Oct; UTC+7 -> 07:00 on Wed 28 Oct; UTC+8 -> 08:00 on Wed 28 Oct; UTC+9 -> 09:00 on Wed 28 Oct; UTC+10 -> 10:00 on Wed 28 Oct; UTC+11 -> 11:00 on Wed 28 Oct; UTC+12 -> 12:00 on Wed 28 Oct
+San Marino                        UTC+1 -> 01:00 on Wed 28 Oct
+Serbia                            UTC+1 -> 01:00 on Wed 28 Oct
+Slovakia                          UTC+1 -> 01:00 on Wed 28 Oct
+Slovenia                          UTC+1 -> 01:00 on Wed 28 Oct
+Spain                             UTC+0 -> 00:00 on Wed 28 Oct; UTC+1 -> 01:00 on Wed 28 Oct
+Sweden                            UTC+1 -> 01:00 on Wed 28 Oct
+Switzerland                       UTC+1 -> 01:00 on Wed 28 Oct
+Ukraine                           UTC+2 -> 02:00 on Wed 28 Oct
+United Kingdom                    UTC+0 -> 00:00 on Wed 28 Oct
+Antigua and Barbuda               UTC-4 -> 20:00 on Tue 27 Oct (previous day)
+Bahamas                           UTC-5 -> 19:00 on Tue 27 Oct (previous day)
+Barbados                          UTC-4 -> 20:00 on Tue 27 Oct (previous day)
+Belize                            UTC-6 -> 18:00 on Tue 27 Oct (previous day)
+Canada                            UTC-8 -> 16:00 on Tue 27 Oct (previous day); UTC-7 -> 17:00 on Tue 27 Oct (previous day); UTC-6 -> 18:00 on Tue 27 Oct (previous day); UTC-5 -> 19:00 on Tue 27 Oct (previous day); UTC-4 -> 20:00 on Tue 27 Oct (previous day); UTC-3:30-> 20:30 on Tue 27 Oct (previous day)
+Costa Rica                        UTC-6 -> 18:00 on Tue 27 Oct (previous day)
+Cuba                              UTC-5 -> 19:00 on Tue 27 Oct (previous day)
+Dominica                          UTC-4 -> 20:00 on Tue 27 Oct (previous day)
+Dominican Republic                UTC-4 -> 20:00 on Tue 27 Oct (previous day)
+El Salvador                       UTC-6 -> 18:00 on Tue 27 Oct (previous day)
+Grenada                           UTC-4 -> 20:00 on Tue 27 Oct (previous day)
+Guatemala                         UTC-6 -> 18:00 on Tue 27 Oct (previous day)
+Haiti                             UTC-5 -> 19:00 on Tue 27 Oct (previous day)
+Honduras                          UTC-6 -> 18:00 on Tue 27 Oct (previous day)
+Jamaica                           UTC-5 -> 19:00 on Tue 27 Oct (previous day)
+Mexico                            UTC-8 -> 16:00 on Tue 27 Oct (previous day); UTC-7 -> 17:00 on Tue 27 Oct (previous day); UTC-6 -> 18:00 on Tue 27 Oct (previous day)
+Nicaragua                         UTC-6 -> 18:00 on Tue 27 Oct (previous day)
+Panama                            UTC-5 -> 19:00 on Tue 27 Oct (previous day)
+Saint Kitts and Nevis             UTC-4 -> 20:00 on Tue 27 Oct (previous day)
+Saint Lucia                       UTC-4 -> 20:00 on Tue 27 Oct (previous day)
+Saint Vincent and the Grenadines  UTC-4 -> 20:00 on Tue 27 Oct (previous day)
+Trinidad and Tobago               UTC-4 -> 20:00 on Tue 27 Oct (previous day)
+United States                     UTC-10 -> 14:00 on Tue 27 Oct (previous day); UTC-9 -> 15:00 on Tue 27 Oct (previous day); UTC-8 ->16:00 on Tue 27 Oct (previous day); UTC-7 -> 17:00 on Tue 27 Oct (previous day); UTC-6 -> 18:00 on Tue 27 Oct (previous day); UTC-5 -> 19:00 on Tue 27 Oct (previous day)
+Argentina                         UTC-3 -> 21:00 on Tue 27 Oct (previous day)
+Bolivia                           UTC-4 -> 20:00 on Tue 27 Oct (previous day)
+Brazil                            UTC-5 -> 19:00 on Tue 27 Oct (previous day); UTC-4 -> 20:00 on Tue 27 Oct (previous day); UTC-3 -> 21:00 on Tue 27 Oct (previous day); UTC-2 -> 22:00 on Tue 27 Oct (previous day)
+Chile                             UTC-6 -> 18:00 on Tue 27 Oct (previous day); UTC-4 -> 20:00 on Tue 27 Oct (previous day)
+Colombia                          UTC-5 -> 19:00 on Tue 27 Oct (previous day)
+Ecuador                           UTC-6 -> 18:00 on Tue 27 Oct (previous day); UTC-5 -> 19:00 on Tue 27 Oct (previous day)
+Guyana                            UTC-4 -> 20:00 on Tue 27 Oct (previous day)
+Paraguay                          UTC-3 -> 21:00 on Tue 27 Oct (previous day)
+Peru                              UTC-5 -> 19:00 on Tue 27 Oct (previous day)
+Suriname                          UTC-3 -> 21:00 on Tue 27 Oct (previous day)
+Uruguay                           UTC-3 -> 21:00 on Tue 27 Oct (previous day)
+Venezuela                         UTC-4 -> 20:00 on Tue 27 Oct (previous day)
+Australia                         UTC+8 -> 08:00 on Wed 28 Oct; UTC+9:30 -> 09:30 on Wed 28 Oct; UTC+10 -> 10:00 on Wed 28 Oct
+Fiji                              UTC+12 -> 12:00 on Wed 28 Oct
+Kiribati                          UTC+12 -> 12:00 on Wed 28 Oct; UTC+13 -> 13:00 on Wed 28 Oct; UTC+14 -> 14:00 on Wed 28 Oct
+Marshall Islands                  UTC+12 -> 12:00 on Wed 28 Oct
+Micronesia (Federated States of)  UTC+10 -> 10:00 on Wed 28 Oct; UTC+11 -> 11:00 on Wed 28 Oct
+Nauru                             UTC+12 -> 12:00 on Wed 28 Oct
+New Zealand                       UTC+12 -> 12:00 on Wed 28 Oct; UTC+12:45 -> 12:45 on Wed 28 Oct
+Palau                             UTC+9 -> 09:00 on Wed 28 Oct
+Papua New Guinea                  UTC+10 -> 10:00 on Wed 28 Oct
+Samoa                             UTC+13 -> 13:00 on Wed 28 Oct
+Solomon Islands                   UTC+11 -> 11:00 on Wed 28 Oct
+Tonga                             UTC+13 -> 13:00 on Wed 28 Oct
+Tuvalu                            UTC+12 -> 12:00 on Wed 28 Oct
+Vanuatu                           UTC+11 -> 11:00 on Wed 28 Oct
+Holy See (Vatican City)           UTC+1 -> 01:00 on Wed 28 Oct
+State of Palestine                UTC+2 -> 02:00 on Wed 28 Oct
+
+Enter a time (e.g. 20:00 or 8:00 PM; blank to quit): 0330 AM
+Error: Cannot read '0330 AM' as a time. Try 20:00, 8:00 PM or 2026-10-27 20:00.
+
+Enter a time (e.g. 20:00 or 8:00 PM; blank to quit): 03:30 AM
+
+It is 03:30 in Uganda (UTC+3). All time zones follow:
+
+Algeria                           UTC+1 -> 01:30 on Wed 28 Oct
+Angola                            UTC+1 -> 01:30 on Wed 28 Oct
+Benin                             UTC+1 -> 01:30 on Wed 28 Oct
+Botswana                          UTC+2 -> 02:30 on Wed 28 Oct
+Burkina Faso                      UTC+0 -> 00:30 on Wed 28 Oct
+Burundi                           UTC+2 -> 02:30 on Wed 28 Oct
+Cabo Verde                        UTC-1 -> 23:30 on Tue 27 Oct (previous day)
+Cameroon                          UTC+1 -> 01:30 on Wed 28 Oct
+Central African Republic          UTC+1 -> 01:30 on Wed 28 Oct
+Chad                              UTC+1 -> 01:30 on Wed 28 Oct
+Comoros                           UTC+3 -> 03:30 on Wed 28 Oct
+Congo (Republic of the)           UTC+1 -> 01:30 on Wed 28 Oct
+Côte d'Ivoire                     UTC+0 -> 00:30 on Wed 28 Oct
+Democratic Republic of the Congo  UTC+1 -> 01:30 on Wed 28 Oct; UTC+2 -> 02:30 on Wed 28 Oct
+Djibouti                          UTC+3 -> 03:30 on Wed 28 Oct
+Egypt                             UTC+2 -> 02:30 on Wed 28 Oct
+Equatorial Guinea                 UTC+1 -> 01:30 on Wed 28 Oct
+Eritrea                           UTC+3 -> 03:30 on Wed 28 Oct
+Eswatini                          UTC+2 -> 02:30 on Wed 28 Oct
+Ethiopia                          UTC+3 -> 03:30 on Wed 28 Oct
+Gabon                             UTC+1 -> 01:30 on Wed 28 Oct
+Gambia                            UTC+0 -> 00:30 on Wed 28 Oct
+Ghana                             UTC+0 -> 00:30 on Wed 28 Oct
+Guinea                            UTC+0 -> 00:30 on Wed 28 Oct
+Guinea-Bissau                     UTC+0 -> 00:30 on Wed 28 Oct
+Kenya                             UTC+3 -> 03:30 on Wed 28 Oct
+Lesotho                           UTC+2 -> 02:30 on Wed 28 Oct
+Liberia                           UTC+0 -> 00:30 on Wed 28 Oct
+Libya                             UTC+2 -> 02:30 on Wed 28 Oct
+Madagascar                        UTC+3 -> 03:30 on Wed 28 Oct
+Malawi                            UTC+2 -> 02:30 on Wed 28 Oct
+Mali                              UTC+0 -> 00:30 on Wed 28 Oct
+Mauritania                        UTC+0 -> 00:30 on Wed 28 Oct
+Mauritius                         UTC+4 -> 04:30 on Wed 28 Oct
+Morocco                           UTC+1 -> 01:30 on Wed 28 Oct
+Mozambique                        UTC+2 -> 02:30 on Wed 28 Oct
+Namibia                           UTC+2 -> 02:30 on Wed 28 Oct
+Niger                             UTC+1 -> 01:30 on Wed 28 Oct
+Nigeria                           UTC+1 -> 01:30 on Wed 28 Oct
+Rwanda                            UTC+2 -> 02:30 on Wed 28 Oct
+São Tomé and Príncipe             UTC+0 -> 00:30 on Wed 28 Oct
+Senegal                           UTC+0 -> 00:30 on Wed 28 Oct
+Seychelles                        UTC+4 -> 04:30 on Wed 28 Oct
+Sierra Leone                      UTC+0 -> 00:30 on Wed 28 Oct
+Somalia                           UTC+3 -> 03:30 on Wed 28 Oct
+South Africa                      UTC+2 -> 02:30 on Wed 28 Oct
+South Sudan                       UTC+2 -> 02:30 on Wed 28 Oct
+Sudan                             UTC+2 -> 02:30 on Wed 28 Oct
+Tanzania                          UTC+3 -> 03:30 on Wed 28 Oct
+Togo                              UTC+0 -> 00:30 on Wed 28 Oct
+Tunisia                           UTC+1 -> 01:30 on Wed 28 Oct
+Uganda                            UTC+3 -> 03:30 on Wed 28 Oct
+Zambia                            UTC+2 -> 02:30 on Wed 28 Oct
+Zimbabwe                          UTC+2 -> 02:30 on Wed 28 Oct
+Afghanistan                       UTC+4:30 -> 05:00 on Wed 28 Oct
+Armenia                           UTC+4 -> 04:30 on Wed 28 Oct
+Azerbaijan                        UTC+4 -> 04:30 on Wed 28 Oct
+Bahrain                           UTC+3 -> 03:30 on Wed 28 Oct
+Bangladesh                        UTC+6 -> 06:30 on Wed 28 Oct
+Bhutan                            UTC+6 -> 06:30 on Wed 28 Oct
+Brunei                            UTC+8 -> 08:30 on Wed 28 Oct
+Cambodia                          UTC+7 -> 07:30 on Wed 28 Oct
+China                             UTC+8 -> 08:30 on Wed 28 Oct
+Cyprus                            UTC+2 -> 02:30 on Wed 28 Oct
+Georgia                           UTC+4 -> 04:30 on Wed 28 Oct
+India                             UTC+5:30 -> 06:00 on Wed 28 Oct
+Indonesia                         UTC+7 -> 07:30 on Wed 28 Oct; UTC+8 -> 08:30 on Wed 28 Oct; UTC+9 -> 09:30 on Wed 28 Oct
+Iran                              UTC+3:30 -> 04:00 on Wed 28 Oct
+Iraq                              UTC+3 -> 03:30 on Wed 28 Oct
+Israel                            UTC+2 -> 02:30 on Wed 28 Oct
+Japan                             UTC+9 -> 09:30 on Wed 28 Oct
+Jordan                            UTC+3 -> 03:30 on Wed 28 Oct
+Kazakhstan                        UTC+5 -> 05:30 on Wed 28 Oct
+Kuwait                            UTC+3 -> 03:30 on Wed 28 Oct
+Kyrgyzstan                        UTC+6 -> 06:30 on Wed 28 Oct
+Laos                              UTC+7 -> 07:30 on Wed 28 Oct
+Lebanon                           UTC+2 -> 02:30 on Wed 28 Oct
+Malaysia                          UTC+8 -> 08:30 on Wed 28 Oct
+Maldives                          UTC+5 -> 05:30 on Wed 28 Oct
+Mongolia                          UTC+7 -> 07:30 on Wed 28 Oct; UTC+8 -> 08:30 on Wed 28 Oct
+Myanmar                           UTC+6:30 -> 07:00 on Wed 28 Oct
+Nepal                             UTC+5:45 -> 06:15 on Wed 28 Oct
+North Korea                       UTC+9 -> 09:30 on Wed 28 Oct
+Oman                              UTC+4 -> 04:30 on Wed 28 Oct
+Pakistan                          UTC+5 -> 05:30 on Wed 28 Oct
+Philippines                       UTC+8 -> 08:30 on Wed 28 Oct
+Qatar                             UTC+3 -> 03:30 on Wed 28 Oct
+Saudi Arabia                      UTC+3 -> 03:30 on Wed 28 Oct
+Singapore                         UTC+8 -> 08:30 on Wed 28 Oct
+South Korea                       UTC+9 -> 09:30 on Wed 28 Oct
+Sri Lanka                         UTC+5:30 -> 06:00 on Wed 28 Oct
+Syria                             UTC+3 -> 03:30 on Wed 28 Oct
+Tajikistan                        UTC+5 -> 05:30 on Wed 28 Oct
+Thailand                          UTC+7 -> 07:30 on Wed 28 Oct
+Timor-Leste                       UTC+9 -> 09:30 on Wed 28 Oct
+Türkiye                           UTC+3 -> 03:30 on Wed 28 Oct
+Turkmenistan                      UTC+5 -> 05:30 on Wed 28 Oct
+United Arab Emirates              UTC+4 -> 04:30 on Wed 28 Oct
+Uzbekistan                        UTC+5 -> 05:30 on Wed 28 Oct
+Vietnam                           UTC+7 -> 07:30 on Wed 28 Oct
+Yemen                             UTC+3 -> 03:30 on Wed 28 Oct
+Albania                           UTC+1 -> 01:30 on Wed 28 Oct
+Andorra                           UTC+1 -> 01:30 on Wed 28 Oct
+Austria                           UTC+1 -> 01:30 on Wed 28 Oct
+Belarus                           UTC+3 -> 03:30 on Wed 28 Oct
+Belgium                           UTC+1 -> 01:30 on Wed 28 Oct
+Bosnia and Herzegovina            UTC+1 -> 01:30 on Wed 28 Oct
+Bulgaria                          UTC+2 -> 02:30 on Wed 28 Oct
+Croatia                           UTC+1 -> 01:30 on Wed 28 Oct
+Czechia                           UTC+1 -> 01:30 on Wed 28 Oct
+Denmark                           UTC+1 -> 01:30 on Wed 28 Oct
+Estonia                           UTC+2 -> 02:30 on Wed 28 Oct
+Finland                           UTC+2 -> 02:30 on Wed 28 Oct
+France                            UTC+1 -> 01:30 on Wed 28 Oct
+Germany                           UTC+1 -> 01:30 on Wed 28 Oct
+Greece                            UTC+2 -> 02:30 on Wed 28 Oct
+Hungary                           UTC+1 -> 01:30 on Wed 28 Oct
+Iceland                           UTC+0 -> 00:30 on Wed 28 Oct
+Ireland                           UTC+0 -> 00:30 on Wed 28 Oct
+Italy                             UTC+1 -> 01:30 on Wed 28 Oct
+Latvia                            UTC+2 -> 02:30 on Wed 28 Oct
+Liechtenstein                     UTC+1 -> 01:30 on Wed 28 Oct
+Lithuania                         UTC+2 -> 02:30 on Wed 28 Oct
+Luxembourg                        UTC+1 -> 01:30 on Wed 28 Oct
+Malta                             UTC+1 -> 01:30 on Wed 28 Oct
+Moldova                           UTC+2 -> 02:30 on Wed 28 Oct
+Monaco                            UTC+1 -> 01:30 on Wed 28 Oct
+Montenegro                        UTC+1 -> 01:30 on Wed 28 Oct
+Netherlands                       UTC+1 -> 01:30 on Wed 28 Oct
+North Macedonia                   UTC+1 -> 01:30 on Wed 28 Oct
+Norway                            UTC+1 -> 01:30 on Wed 28 Oct
+Poland                            UTC+1 -> 01:30 on Wed 28 Oct
+Portugal                          UTC-1 -> 23:30 on Tue 27 Oct (previous day); UTC+0 -> 00:30 on Wed 28 Oct
+Romania                           UTC+2 -> 02:30 on Wed 28 Oct
+Russia                            UTC+2 -> 02:30 on Wed 28 Oct; UTC+3 -> 03:30 on Wed 28 Oct; UTC+4 -> 04:30 on Wed 28 Oct; UTC+5 -> 05:30 on Wed 28 Oct; UTC+6 -> 06:30 on Wed 28 Oct; UTC+7 -> 07:30 on Wed 28 Oct; UTC+8 -> 08:30 on Wed 28 Oct; UTC+9 -> 09:30 on Wed 28 Oct; UTC+10 -> 10:30 on Wed 28 Oct; UTC+11 -> 11:30 on Wed 28 Oct; UTC+12 -> 12:30 on Wed 28 Oct
+San Marino                        UTC+1 -> 01:30 on Wed 28 Oct
+Serbia                            UTC+1 -> 01:30 on Wed 28 Oct
+Slovakia                          UTC+1 -> 01:30 on Wed 28 Oct
+Slovenia                          UTC+1 -> 01:30 on Wed 28 Oct
+Spain                             UTC+0 -> 00:30 on Wed 28 Oct; UTC+1 -> 01:30 on Wed 28 Oct
+Sweden                            UTC+1 -> 01:30 on Wed 28 Oct
+Switzerland                       UTC+1 -> 01:30 on Wed 28 Oct
+Ukraine                           UTC+2 -> 02:30 on Wed 28 Oct
+United Kingdom                    UTC+0 -> 00:30 on Wed 28 Oct
+Antigua and Barbuda               UTC-4 -> 20:30 on Tue 27 Oct (previous day)
+Bahamas                           UTC-5 -> 19:30 on Tue 27 Oct (previous day)
+Barbados                          UTC-4 -> 20:30 on Tue 27 Oct (previous day)
+Belize                            UTC-6 -> 18:30 on Tue 27 Oct (previous day)
+Canada                            UTC-8 -> 16:30 on Tue 27 Oct (previous day); UTC-7 -> 17:30 on Tue 27 Oct (previous day); UTC-6 -> 18:30 on Tue 27 Oct (previous day); UTC-5 -> 19:30 on Tue 27 Oct (previous day); UTC-4 -> 20:30 on Tue 27 Oct (previous day); UTC-3:30-> 21:00 on Tue 27 Oct (previous day)
+Costa Rica                        UTC-6 -> 18:30 on Tue 27 Oct (previous day)
+Cuba                              UTC-5 -> 19:30 on Tue 27 Oct (previous day)
+Dominica                          UTC-4 -> 20:30 on Tue 27 Oct (previous day)
+Dominican Republic                UTC-4 -> 20:30 on Tue 27 Oct (previous day)
+El Salvador                       UTC-6 -> 18:30 on Tue 27 Oct (previous day)
+Grenada                           UTC-4 -> 20:30 on Tue 27 Oct (previous day)
+Guatemala                         UTC-6 -> 18:30 on Tue 27 Oct (previous day)
+Haiti                             UTC-5 -> 19:30 on Tue 27 Oct (previous day)
+Honduras                          UTC-6 -> 18:30 on Tue 27 Oct (previous day)
+Jamaica                           UTC-5 -> 19:30 on Tue 27 Oct (previous day)
+Mexico                            UTC-8 -> 16:30 on Tue 27 Oct (previous day); UTC-7 -> 17:30 on Tue 27 Oct (previous day); UTC-6 -> 18:30 on Tue 27 Oct (previous day)
+Nicaragua                         UTC-6 -> 18:30 on Tue 27 Oct (previous day)
+Panama                            UTC-5 -> 19:30 on Tue 27 Oct (previous day)
+Saint Kitts and Nevis             UTC-4 -> 20:30 on Tue 27 Oct (previous day)
+Saint Lucia                       UTC-4 -> 20:30 on Tue 27 Oct (previous day)
+Saint Vincent and the Grenadines  UTC-4 -> 20:30 on Tue 27 Oct (previous day)
+Trinidad and Tobago               UTC-4 -> 20:30 on Tue 27 Oct (previous day)
+United States                     UTC-10 -> 14:30 on Tue 27 Oct (previous day); UTC-9 -> 15:30 on Tue 27 Oct (previous day); UTC-8 ->16:30 on Tue 27 Oct (previous day); UTC-7 -> 17:30 on Tue 27 Oct (previous day); UTC-6 -> 18:30 on Tue 27 Oct (previous day); UTC-5 -> 19:30 on Tue 27 Oct (previous day)
+Argentina                         UTC-3 -> 21:30 on Tue 27 Oct (previous day)
+Bolivia                           UTC-4 -> 20:30 on Tue 27 Oct (previous day)
+Brazil                            UTC-5 -> 19:30 on Tue 27 Oct (previous day); UTC-4 -> 20:30 on Tue 27 Oct (previous day); UTC-3 -> 21:30 on Tue 27 Oct (previous day); UTC-2 -> 22:30 on Tue 27 Oct (previous day)
+Chile                             UTC-6 -> 18:30 on Tue 27 Oct (previous day); UTC-4 -> 20:30 on Tue 27 Oct (previous day)
+Colombia                          UTC-5 -> 19:30 on Tue 27 Oct (previous day)
+Ecuador                           UTC-6 -> 18:30 on Tue 27 Oct (previous day); UTC-5 -> 19:30 on Tue 27 Oct (previous day)
+Guyana                            UTC-4 -> 20:30 on Tue 27 Oct (previous day)
+Paraguay                          UTC-3 -> 21:30 on Tue 27 Oct (previous day)
+Peru                              UTC-5 -> 19:30 on Tue 27 Oct (previous day)
+Suriname                          UTC-3 -> 21:30 on Tue 27 Oct (previous day)
+Uruguay                           UTC-3 -> 21:30 on Tue 27 Oct (previous day)
+Venezuela                         UTC-4 -> 20:30 on Tue 27 Oct (previous day)
+Australia                         UTC+8 -> 08:30 on Wed 28 Oct; UTC+9:30 -> 10:00 on Wed 28 Oct; UTC+10 -> 10:30 on Wed 28 Oct
+Fiji                              UTC+12 -> 12:30 on Wed 28 Oct
+Kiribati                          UTC+12 -> 12:30 on Wed 28 Oct; UTC+13 -> 13:30 on Wed 28 Oct; UTC+14 -> 14:30 on Wed 28 Oct
+Marshall Islands                  UTC+12 -> 12:30 on Wed 28 Oct
+Micronesia (Federated States of)  UTC+10 -> 10:30 on Wed 28 Oct; UTC+11 -> 11:30 on Wed 28 Oct
+Nauru                             UTC+12 -> 12:30 on Wed 28 Oct
+New Zealand                       UTC+12 -> 12:30 on Wed 28 Oct; UTC+12:45 -> 13:15 on Wed 28 Oct
+Palau                             UTC+9 -> 09:30 on Wed 28 Oct
+Papua New Guinea                  UTC+10 -> 10:30 on Wed 28 Oct
+Samoa                             UTC+13 -> 13:30 on Wed 28 Oct
+Solomon Islands                   UTC+11 -> 11:30 on Wed 28 Oct
+Tonga                             UTC+13 -> 13:30 on Wed 28 Oct
+Tuvalu                            UTC+12 -> 12:30 on Wed 28 Oct
+Vanuatu                           UTC+11 -> 11:30 on Wed 28 Oct
+Holy See (Vatican City)           UTC+1 -> 01:30 on Wed 28 Oct
+State of Palestine                UTC+2 -> 02:30 on Wed 28 Oct
+
+Enter a time (e.g. 20:00 or 8:00 PM; blank to quit):  
+PS C:\External_Files\GitHub\Grand Clock\Earth> 

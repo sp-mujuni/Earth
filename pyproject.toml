@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "earth-temporal"
+version = "0.2.0"
+description = "Global Temporal Intelligence: a shared, location-aware temporal computation engine."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["tzdata; platform_system == 'Windows'"]
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6"]
+[project.scripts]
+earth = "earth.cli.main:main"
+[tool.setuptools.packages.find]
+include = ["earth*"]
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+[tool.ruff]
+line-length = 100
+target-version = "py310"

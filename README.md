@@ -1,142 +1,225 @@
-# Earth Time Zone Converter
+# EARTH — Global Temporal Intelligence
 
-`timezone_converter.py` is a small, dependency-free Python command-line tool
-for comparing the local time in countries around the world. Enter a time in a
-reference location and the tool calculates the corresponding time for every
-standard time zone listed in [`countries-time-zones.md`](./countries-time-zones.md).
+**One computational engine. Two interfaces. One global temporal model.**
 
-The default reference location is Uganda (`UTC+3`), but you can use another
-single-zone country or provide a raw UTC offset.
+EARTH is evolving from a country-based time-zone converter into a Global Temporal Intelligence platform: a reliable system for calculating, comparing, and reasoning about civil time across the planet.
+
+The initial architecture provides a shared Python engine for both the command-line interface and the planned web application. The engine uses IANA time-zone identifiers and Python's `zoneinfo`, rather than treating countries as if each had one fixed UTC offset.
+
+## Current development status
+
+The `feature/temporal-engine` branch introduces the first foundation of EARTH v0.2:
+
+- IANA time-zone resolution.
+- Date-aware conversion between locations.
+- Explicit detection of ambiguous and nonexistent local times during DST transitions.
+- Multi-location comparison for a single exact instant.
+- A starter city resolver and direct IANA identifier support.
+- A new `earth` command-line entry point.
+- Automated tests for offsets, DST, and date-boundary behaviour.
+
+The existing `timezone_converter.py` and `countries-time-zones.md` remain in the repository as the original standard-offset converter and reference dataset. They are retained for backwards compatibility and are not the authoritative source for the new engine.
+
+## Architecture
+
+```text
+EARTH
+├── CLI (Python) ───────────────────────┐
+│                                       │
+└── Web application (Next.js)           │
+        │                               │
+        ▼                               ▼
+     FastAPI                         EARTH Core
+        │                               │
+        └───────────────────────────────┘
+                                        │
+                   ┌────────────────────┼──────────────────┐
+                   ▼                    ▼                  ▼
+               Time Engine       Location Engine     Temporal Intelligence
+               IANA / DST        City / IANA zones   Comparison / scheduling
+                                        │
+                                        ▼
+                              IANA Time Zone Database
+```
+
+The core package must not depend on the CLI or web interface. Both interfaces call the same computation functions; the web backend will expose those functions through a versioned API.
+
+### Repository layout
+
+```text
+earth/
+├── core/
+│   ├── timezone.py       # IANA resolution, DST validation, zone metadata
+│   └── conversion.py     # Conversion and multi-location comparison
+├── locations/
+│   └── resolver.py       # Starter city index and IANA lookup
+└── cli/
+    └── main.py           # CLI backed by the shared engine
+
+tests/
+├── test_timezone.py
+└── test_conversion.py
+
+docs/
+└── TIME_MODEL.md
+```
 
 ## Requirements
 
-- Python 3.10 or later
+- Python 3.10+
+- IANA time-zone database; on Windows the project installs the `tzdata` fallback.
+- Development tests: `pytest`
 
-The script uses only Python's standard library. No package installation is
-required.
+## Installation
 
-## Quick start
+Clone the repository and install the project in editable mode:
 
-Run the tool without a time to use interactive mode:
-
-```text
-python timezone_converter.py
+```bash
+git clone https://github.com/sp-mujuni/Earth.git
+cd Earth
+python -m venv .venv
 ```
 
-Enter a time such as `20:00` or `8:00 PM`. Press Enter on a blank prompt to
-quit.
+Activate the environment:
 
-To run it non-interactively:
-
-```text
-python timezone_converter.py 20:00
+**Windows PowerShell**
+```powershell
+.venv\Scripts\Activate.ps1
 ```
 
-The command reports the time for each country and marks dates that fall on the
-previous or next day.
-
-## Usage
-
-```text
-python timezone_converter.py [TIME] [OPTIONS]
+**macOS / Linux**
+```bash
+source .venv/bin/activate
 ```
 
-### Examples
+Install the package and development dependencies:
 
-Interpret `09:00` as the time in Japan:
-
-```text
-python timezone_converter.py 09:00 --from Japan
+```bash
+python -m pip install -e ".[dev]"
 ```
 
-Interpret `14:30` as a time in UTC-5:
+## CLI usage
 
-```text
-python timezone_converter.py 14:30 --offset -5
+The new CLI is installed as `earth`.
+
+### Current local time
+
+```bash
+earth clock
+earth clock --location London
+earth clock --location Africa/Kampala
 ```
 
-Show only selected countries:
+The default location is `Africa/Kampala`, but the engine does not assume that the computer itself is in Uganda.
 
-```text
-python timezone_converter.py 20:00 --country Brazil Japan Australia
+### Convert a local date and time
+
+```bash
+earth convert --from Kampala --to London --datetime "2026-11-24T14:30"
 ```
 
-Keep the clock running from the entered time:
+The input is a local wall-clock time in the source location. If that time is ambiguous during a DST rollback, EARTH asks for an explicit occurrence:
 
-```text
-python timezone_converter.py 20:00 --live
+```bash
+earth convert --from New York --to Kampala --datetime "2026-11-01T01:30" --fold 0
 ```
 
-Save the calculated times as a Markdown table:
+- `--fold 0`: earlier occurrence.
+- `--fold 1`: later occurrence.
 
-```text
-python timezone_converter.py 20:00 --output result.md
+A nonexistent wall time during a DST clock advance is rejected rather than silently shifted.
+
+### Compare locations
+
+```bash
+earth compare Africa/Kampala Europe/London Asia/Tokyo
+earth compare Africa/Kampala Europe/London --at "2026-11-24T12:00:00Z"
 ```
 
-Use a different time-zone data file:
+Comparisons require one exact instant. When `--at` is omitted, the current UTC instant is used.
 
-```text
-python timezone_converter.py 20:00 --file path/to/time-zones.md
+### Search locations and time zones
+
+```bash
+earth location search Kampala
+earth location search Pacific
 ```
 
-### Options
+The first location index is intentionally a curated starter set. Direct IANA identifiers are supported even when a city is not in that index.
 
-| Option | Description |
-|---|---|
-| `TIME` | Optional time to apply. Interactive mode starts when omitted. |
-| `--from COUNTRY` | Treat the entered time as the time in a single-zone country. Defaults to Uganda. |
-| `--offset OFFSET` | Treat the entered time as a raw UTC offset, such as `+3`, `-5:30`, or `UTC+5:30`. Overrides `--from`. |
-| `--country COUNTRY [...]` | Limit output to the named countries. |
-| `--output FILE` | Write the results to a Markdown file as well as printing them. |
-| `--live` | Update the displayed times every second. Stop with `Ctrl+C`. |
-| `--file FILE` | Read country and offset data from another Markdown file. |
+## Python API
 
-Country names are matched case-insensitively. A unique partial name is also
-accepted. A country with multiple time zones cannot be used with `--from`;
-use `--offset` when the reference country spans several zones.
+The shared engine can be used without invoking the CLI:
 
-## Accepted time formats
+```python
+from datetime import datetime
+from earth.core.conversion import convert_local_datetime
 
-The converter accepts:
+result = convert_local_datetime(
+    datetime(2026, 11, 24, 14, 30),
+    "Africa/Kampala",
+    "Europe/London",
+)
 
-- `14:30`
-- `14:30:00`
-- `1430`
-- `2:30 PM`
-- `2 PM`
-- `2026-10-28 14:30`
-- `2026-10-28 14:30:00`
+print(result.target_local)
+print(result.utc)
+```
 
-Times without a date use the current local date. UTC offsets may include
-30-minute or 45-minute components, for example `+5:30` or `+5:45`.
+For a comparison of one instant across several zones:
 
-## Data and assumptions
+```python
+from datetime import datetime, timezone
+from earth.core.conversion import compare_locations
 
-[`countries-time-zones.md`](./countries-time-zones.md) contains 195 countries:
-the 193 UN member states and two UN observer states. It describes standard
-UTC offsets rather than daylight-saving-time rules.
+rows = compare_locations(
+    datetime.now(timezone.utc),
+    ["Africa/Kampala", "Europe/London", "Asia/Tokyo"],
+)
+```
 
-The converter calculates one shared UTC moment:
+## Temporal correctness
 
-1. The entered clock time is interpreted in the selected reference offset.
-2. That time is converted to UTC.
-3. Each country's listed offset is applied to produce its local time.
+EARTH distinguishes between a local wall-clock reading and an exact instant.
 
-Some countries have multiple zones. The script includes explicit standard-zone
-overrides for Canada, Australia, the United States, Mexico, and Morocco because
-their source-table ranges or seasonal notes need special handling. This is a
-standard-offset comparison tool, not a daylight-saving-aware replacement for
-the IANA time-zone database.
+- **Aware datetime:** identifies an instant and an associated time zone or UTC offset.
+- **Naive datetime:** represents a wall-clock value that still needs to be interpreted in a named zone.
+- **Ambiguous local time:** occurs twice when clocks move backwards. The caller must choose `fold=0` or `fold=1`.
+- **Nonexistent local time:** is skipped when clocks move forwards. EARTH raises an explicit error.
 
-## Project files
+All cross-location conversions resolve the source instant and render that instant in the destination zone. Fractional-hour offsets, DST transitions, and date changes are handled by the IANA database.
 
-| File | Purpose |
-|---|---|
-| [`timezone_converter.py`](./timezone_converter.py) | CLI, parsing, time calculations, live display, and Markdown export |
-| [`countries-time-zones.md`](./countries-time-zones.md) | Country-to-standard-UTC-offset input data |
-| [`countries (1).md`](./countries%20%281%29.md) | Country list reference |
-| [`release_1.txt`](./release_1.txt) | Example interactive output |
+See [docs/TIME_MODEL.md](docs/TIME_MODEL.md) for the detailed model and assumptions.
+
+## Testing
+
+Run the automated test suite:
+
+```bash
+python -m pytest
+```
+
+The initial tests cover Kampala, London, Chatham Islands' 45-minute offset, DST gaps and folds in New York, and date-line changes.
+
+## Roadmap
+
+| Phase | Focus | Status |
+|---|---|---|
+| 1 | Shared IANA-aware temporal engine and tests | In progress |
+| 2 | Modernized CLI and expanded location resolution | Planned |
+| 3 | FastAPI and Next.js web application | Planned |
+| 4 | Working-hours and meeting-time intelligence | Planned |
+| 5 | Sunrise, sunset, solar noon, and daylight maps | Planned |
+| 6 | Julian dates, sidereal time, and astronomical calculations | Planned |
+
+## Design principles
+
+1. One computational engine shared by all interfaces.
+2. IANA time-zone identifiers are authoritative for civil-time rules.
+3. UTC is the common reference for comparing exact instants.
+4. Ambiguous and nonexistent local times are surfaced explicitly.
+5. Accuracy and reproducibility take priority over decorative features.
+6. The system should expand into solar and astronomical time without rewriting the civil-time foundation.
 
 ## License
 
-No license file is currently included in this project.
+No license file is currently present. A license should be selected before distributing EARTH for reuse.

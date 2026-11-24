@@ -405,5 +405,8 @@ Vanuatu                           UTC+11 -> 11:30 on Wed 28 Oct
 Holy See (Vatican City)           UTC+1 -> 01:30 on Wed 28 Oct
 State of Palestine                UTC+2 -> 02:30 on Wed 28 Oct
 
-Enter a time (e.g. 20:00 or 8:00 PM; blank to quit):  
+Enter a time (e.g. 20:00 or 8:00 PM; blank to quit): 
+
+Boiler plate code
+
 PS C:\External_Files\GitHub\Grand Clock\Earth> 

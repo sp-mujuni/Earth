@@ -7,7 +7,7 @@ from __future__ import annotations
 import hmac
 import os
 import sqlite3
-from contextlib import asynccontextmanager, closing
+from contextlib import asynccontextmanager, contextmanager
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
@@ -36,6 +36,15 @@ def _connect() -> sqlite3.Connection:
     connection = sqlite3.connect(path)
     connection.row_factory = sqlite3.Row
     return connection
+
+
+@contextmanager
+def _connection():
+    connection = _connect()
+    try:
+        yield connection
+    finally:
+        connection.close()
 
 
 def _dict(row: sqlite3.Row) -> dict[str, Any]:
@@ -132,7 +141,7 @@ app.add_middleware(
 
 @app.get("/api/v1/health", response_model=HealthResponse, tags=["system"])
 def health() -> HealthResponse:
-    with closing(_connect()) as connection:
+    with _connection() as connection:
         connection.execute("SELECT 1").fetchone()
     return HealthResponse(
         status="operational",

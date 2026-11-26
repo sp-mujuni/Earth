@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Kampala",
+    "latitude": 0.3476,
+    "longitude": 32.5825,
+    "timezone_name": "Africa/Kampala"
+  },
+  {
+    "name": "Entebbe",
+    "latitude": 0.0512,
+    "longitude": 32.4637,
+    "timezone_name": "Africa/Kampala"
+  },
+  {
+    "name": "Jinja",
+    "latitude": 0.4479,
+    "longitude": 33.2026,
+    "timezone_name": "Africa/Kampala"
+  },
+  {
+    "name": "Mbarara",
+    "latitude": -0.6072,
+    "longitude": 30.6545,
+    "timezone_name": "Africa/Kampala"
+  },
+  {
+    "name": "Gulu",
+    "latitude": 2.7746,
+    "longitude": 32.2990,
+    "timezone_name": "Africa/Kampala"
+  }
+]

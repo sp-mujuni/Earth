@@ -12,6 +12,7 @@ dependencies = ["tzdata; platform_system == 'Windows'"]
 dev = ["pytest>=8", "ruff>=0.6"]
 [project.scripts]
 earth = "earth.cli.main:main"
+earth-weather = "earth.weather.cli:main"
 [tool.setuptools.packages.find]
 include = ["earth*"]
 [tool.pytest.ini_options]

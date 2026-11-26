@@ -10,3 +10,7 @@ build/
 *.egg-info/
 .coverage
 htmlcov/
+
+# Local weather database files
+data/*.sqlite3
+data/*.sqlite3-*

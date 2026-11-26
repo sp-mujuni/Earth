@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useState } from "react";
+import type { ReactNode } from "react";
 import { Activity, Cloud, Compass, Database, Globe2, LayoutDashboard, Map, RefreshCw, Satellite, ShieldAlert, Waves, Wind } from "lucide-react";
 import { Area, AreaChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 import { api, type ForecastPoint, type Location, type Overview } from "@/lib/api";
@@ -60,4 +61,4 @@ export default function Home() {
   </main></div>
  </div>;
 }
-function Stat({label,value,note,icon}:{label:string;value:string|number;note:string;icon:React.ReactNode}){return <div className="stat"><div style={{display:"flex",justifyContent:"space-between",alignItems:"center"}}><span className="statlabel">{label}</span><span className="accent">{icon}</span></div><div className="statvalue">{value}</div><div className="statnote">{note}</div></div>;}
+function Stat({label,value,note,icon}:{label:string;value:string|number;note:string;icon:ReactNode}){return <div className="stat"><div style={{display:"flex",justifyContent:"space-between",alignItems:"center"}}><span className="statlabel">{label}</span><span className="accent">{icon}</span></div><div className="statvalue">{value}</div><div className="statnote">{note}</div></div>;}

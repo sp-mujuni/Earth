@@ -7,7 +7,7 @@ from __future__ import annotations
 import hmac
 import os
 import sqlite3
-from contextlib import asynccontextmanager
+from contextlib import asynccontextmanager, closing
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
@@ -132,7 +132,7 @@ app.add_middleware(
 
 @app.get("/api/v1/health", response_model=HealthResponse, tags=["system"])
 def health() -> HealthResponse:
-    with _connect() as connection:
+    with closing(_connect()) as connection:
         connection.execute("SELECT 1").fetchone()
     return HealthResponse(
         status="operational",

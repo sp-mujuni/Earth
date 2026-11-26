@@ -1,0 +1,1 @@
+"""EARTH HTTP API package."""

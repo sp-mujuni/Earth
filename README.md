@@ -223,3 +223,15 @@ The initial tests cover Kampala, London, Chatham Islands' 45-minute offset, DST 
 ## License
 
 No license file is currently present. A license should be selected before distributing EARTH for reuse.
+
+
+## Weather intelligence (foundation)
+
+The `earth.weather` package introduces geographic weather models, UTC-normalized
+observation and forecast records, an Open-Meteo hourly forecast adapter, and configurable
+24-hour rainfall screening. See [docs/WEATHER_INTELLIGENCE.md](docs/WEATHER_INTELLIGENCE.md)
+for the data model, synchronization principles, limitations, and next steps.
+
+Important: files under the root `weather/` directory are historical synthetic simulations,
+not verified meteorological observations. The rainfall screen is not a flood forecast or
+official warning.

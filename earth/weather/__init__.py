@@ -1,7 +1,5 @@
-"""Weather intelligence foundations for EARTH.
-
-Weather records are geographically anchored and time-stamped in UTC.
-"""
+"""Weather intelligence foundations for EARTH."""
 from earth.weather.models import GeoLocation, WeatherForecast, WeatherObservation
+from earth.weather.storage import WeatherStore
 
-__all__ = ["GeoLocation", "WeatherForecast", "WeatherObservation"]
+__all__ = ["GeoLocation", "WeatherForecast", "WeatherObservation", "WeatherStore"]

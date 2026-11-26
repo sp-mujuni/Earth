@@ -240,3 +240,14 @@ hourly forecasts for configured locations.
 Important: files under the root `weather/` directory are historical synthetic simulations,
 not verified meteorological observations. The rainfall screen is not a flood forecast or
 official warning.
+
+
+## EARTH web platform
+
+The repository now includes a FastAPI service under `api/` and a Next.js dashboard
+under `web/`. Start the API with `uvicorn api.main:app --reload` after installing
+`requirements-api.txt`, then follow [web/README.md](web/README.md) to start the
+frontend. API endpoints and deployment guidance are documented in
+[docs/WEB_PLATFORM.md](docs/WEB_PLATFORM.md). The dashboard displays stored provider
+data and explicitly distinguishes forecasts, measured observations, and synthetic
+historical simulations.

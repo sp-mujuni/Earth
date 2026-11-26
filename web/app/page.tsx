@@ -29,14 +29,14 @@ export default function Home() {
  const [loading,setLoading]=useState(true);
  const [error,setError]=useState("");
  const [search,setSearch]=useState("");
- const [clock,setClock]=useState(new Date());
+ const [clock,setClock]=useState<Date|null>(null);
  const refresh=useCallback(async()=>{
   setLoading(true);setError("");
   try { const [o,l,h]=await Promise.all([api.overview(),api.locations(),api.health()]);setOverview(o);setLocations(l);setHealth(h.status==="operational"); }
   catch(e){setHealth(false);setError(e instanceof Error?e.message:"Unable to reach EARTH API");}
   finally{setLoading(false);}
  },[]);
- useEffect(()=>{void refresh();const p=window.setInterval(()=>void refresh(),60000);const t=window.setInterval(()=>setClock(new Date()),1000);return()=>{window.clearInterval(p);window.clearInterval(t);};},[refresh]);
+ useEffect(()=>{setClock(new Date());void refresh();const p=window.setInterval(()=>void refresh(),60000);const t=window.setInterval(()=>setClock(new Date()),1000);return()=>{window.clearInterval(p);window.clearInterval(t);};},[refresh]);
  useEffect(()=>{let cancelled=false;api.forecast(selected,72).then(d=>{if(!cancelled)setForecast(d);}).catch(()=>{if(!cancelled)setForecast([]);});return()=>{cancelled=true;};},[selected,overview?.forecast_points]);
  const chart=useMemo(()=>forecast.map(p=>({time:new Date(p.valid_at).toLocaleTimeString([],{hour:"2-digit",minute:"2-digit",timeZone:"UTC"}),temperature:p.temperature_c,rain:p.precipitation_mm})),[forecast]);
  const places=locations.length?locations:fallback;
@@ -44,9 +44,9 @@ export default function Home() {
  const current=forecast[0];
  const title=({overview:"Planetary overview",weather:"Weather intelligence",locations:"Geographic network",hazards:"Hazard watch"} as const)[view];
  return <div className="shell">
-  <header className="topbar"><div className="brand"><div className="brandmark">E</div><div><div className="brandname">EARTH</div><div className="brandtag">GLOBAL INTELLIGENCE SYSTEM</div></div></div><div className="topright"><span className={health?"live":""}>{health?"API CONNECTED":"API DISCONNECTED"}</span><span className="utc">UTC {clock.toISOString().slice(11,19)}</span><button className="btn" onClick={()=>void refresh()} disabled={loading}><RefreshCw size={12}/>{loading?"SYNCING":"REFRESH"}</button></div></header>
+  <header className="topbar"><div className="brand"><div className="brandmark">E</div><div><div className="brandname">EARTH</div><div className="brandtag">GLOBAL INTELLIGENCE SYSTEM</div></div></div><div className="topright"><span className={health?"live":""}>{health?"API CONNECTED":"API DISCONNECTED"}</span><span className="utc">UTC {clock?clock.toISOString().slice(11,19):"--:--:--"}</span><button className="btn" onClick={()=>void refresh()} disabled={loading}><RefreshCw size={12}/>{loading?"SYNCING":"REFRESH"}</button></div></header>
   <div className="layout"><aside className="sidebar"><div><div className="navlabel">INTELLIGENCE</div>{nav.map(n=>{const I=n.icon;return <button key={n.id} className={"navitem "+(view===n.id?"active":"")} onClick={()=>setView(n.id)}><I/>{n.label}</button>;})}</div><div><div className="navlabel">SYSTEMS</div><div className="navitem"><Satellite/>Temporal engine</div><div className="navitem"><Database/>Data observatory</div><div className="navitem"><Waves/>Hydrological layer</div><div className="navitem"><Wind/>Atmosphere</div></div><div className="sidefoot"><strong>EARTH / CORE</strong><p>Geographic intelligence anchored to coordinates. Global data cycles aligned to UTC.</p></div></aside>
-  <main className="main"><div className="pagehead"><div><div className="eyebrow">EARTH OBSERVATORY / {view.toUpperCase()}</div><h1>{title}</h1><div className="subhead">A unified view of Earth's changing systems and environmental signals.</div></div><div className="datepill">{clock.toLocaleDateString()} · LOCAL</div></div>
+  <main className="main"><div className="pagehead"><div><div className="eyebrow">EARTH OBSERVATORY / {view.toUpperCase()}</div><h1>{title}</h1><div className="subhead">A unified view of Earth&rsquo;s changing systems and environmental signals.</div></div><div className="datepill">{clock?clock.toLocaleDateString():"—"} · LOCAL</div></div>
    {error&&<div className="notice">API connection unavailable: {error}. Starter geography is shown; live readings appear after the API is running and the first ingestion completes.</div>}
    {view==="overview"&&<><section className="gridstats"><Stat label="Monitored locations" value={overview?.locations_monitored??"—"} note="Distinct geographic points" icon={<Globe2/>}/><Stat label="Forecast data points" value={overview?.forecast_points?.toLocaleString()??"—"} note="Persisted hourly model output" icon={<Cloud/>}/><Stat label="Verified observations" value={overview?.observation_points?.toLocaleString()??"—"} note="Measured station records" icon={<Activity/>}/><Stat label="API status" value={health?"ONLINE":"OFFLINE"} note="Services responding" icon={<Database/>}/></section>
     <div className="mainrow"><section className="panel"><div className="panelhead"><div><div className="paneltitle">Atmospheric outlook</div><div className="panelsub">{selected.toUpperCase()} · NEXT 72 HOURS</div></div><select className="chip" value={selected} onChange={e=>setSelected(e.target.value)}>{places.map(p=><option key={p.name}>{p.name}</option>)}</select></div>

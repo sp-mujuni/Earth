@@ -1,0 +1,50 @@
+name: EARTH web platform
+
+on:
+  push:
+    branches: ["feature/earth-web-platform"]
+    paths:
+      - "api/**"
+      - "web/**"
+      - "earth/weather/**"
+      - "requirements-api.txt"
+      - ".github/workflows/web-platform.yml"
+  pull_request:
+    branches: [main]
+    paths:
+      - "api/**"
+      - "web/**"
+      - "earth/weather/**"
+      - "requirements-api.txt"
+      - ".github/workflows/web-platform.yml"
+
+jobs:
+  api-import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install API dependencies
+        run: python -m pip install -r requirements-api.txt
+      - name: Import FastAPI application
+        run: python -c "from api.main import app; print(app.title)"
+
+  frontend-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: web/package.json
+      - name: Install frontend dependencies
+        working-directory: web
+        run: npm install
+      - name: Build frontend
+        working-directory: web
+        env:
+          NEXT_PUBLIC_EARTH_API_URL: http://localhost:8000/api/v1
+        run: npm run build

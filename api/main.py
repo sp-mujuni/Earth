@@ -144,7 +144,7 @@ def health() -> HealthResponse:
 
 @app.get("/api/v1/overview", response_model=OverviewResponse, tags=["weather"])
 def overview() -> OverviewResponse:
-    with _connect() as connection:
+    with closing(_connect()) as connection:
         forecasts = connection.execute(
             "SELECT COUNT(*) AS n, MAX(retrieved_at) AS latest FROM weather_forecasts"
         ).fetchone()
@@ -169,7 +169,7 @@ def overview() -> OverviewResponse:
 
 @app.get("/api/v1/locations", response_model=list[LocationResponse], tags=["weather"])
 def locations() -> list[LocationResponse]:
-    with _connect() as connection:
+    with closing(_connect()) as connection:
         rows = connection.execute(
             """
             SELECT location_name AS name, latitude, longitude, timezone_name,
@@ -189,7 +189,7 @@ def forecast(
 ) -> list[ForecastPoint]:
     now = datetime.now(timezone.utc)
     end = now + timedelta(hours=hours)
-    with _connect() as connection:
+    with closing(_connect()) as connection:
         rows = connection.execute(
             """
             SELECT valid_at, issued_at, source, temperature_c, precipitation_mm,
